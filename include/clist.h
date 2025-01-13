@@ -98,6 +98,9 @@ CLISTAPI int CListAt(CList list, size_t index, void **out_value);
  */
 CLISTAPI int CListAppend(CList list, const void *value);
 
+CLISTAPI size_t CListGetCapacity(CList list);
+CLISTAPI size_t CListGetSize(CList list);
+
 #if defined(__cplusplus)
 }
 #endif
