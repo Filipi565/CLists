@@ -39,16 +39,29 @@ enum CListError
 /**
  * @brief Initializes a CList
  *
- * This function allocates memory for a new CList structure and initializes its fields.
+ * This function allocates memory for a new CList and initializes its fields.
  *
- * @param outlist A pointer to a pointer to the CList structure that will be initialized.
+ * @param outlist A pointer to the CList that will be initialized.
  * @param member_size The size of the data members that will be stored in the list.
  *
  * @return An integer representing the outcome of the operation.
- * - clist_no_error (0): The list structure was successfully initialized.
- * - clist_error_bad_alloc: Memory allocation failed. The list structure was not initialized.
+ * - clist_no_error (0): The list was successfully initialized.
+ * - clist_error_bad_alloc: Memory allocation failed. The list was not initialized.
  */
 CLISTAPI int CListInit(CList *outlist, size_t member_size);
+
+/**
+ * @brief Deinitializes a CList
+ *
+ * This function frees the memory allocated for a CList and its associated data members.
+ *
+ * @param list The CList that will be deinitialized.
+ *
+ * @return This function does not return a value.
+ *
+ * @note After calling this function, the CList and its associated data members should not be used.
+ *       The memory allocated for the CList and data members will be freed.
+ */
 CLISTAPI void CListDeinit(CList list);
 
 #if defined(__cplusplus)
