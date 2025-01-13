@@ -79,6 +79,21 @@ CLISTAPI void CListDeinit(CList list);
  */
 CLISTAPI int CListAt(CList list, size_t index, void **out_value);
 
+/**
+ * @brief Appends a new element to the end of the list.
+ *
+ * This function appends a new element to the end of the list. If the list's capacity is full,
+ * it will automatically resize the list to accommodate the new element.
+ *
+ * @param list The list to which the new element will be appended.
+ * @param value A pointer to the value that will be appended to the list.
+ *
+ * @return An integer representing the result of the operation.
+ * - clist_no_error: The operation was successful.
+ * - clist_error_bad_alloc: Memory allocation failed, and the list was deinitialized.
+ */
+CLISTAPI int CListAppend(CList list, void *value);
+
 #if defined(__cplusplus)
 }
 #endif
