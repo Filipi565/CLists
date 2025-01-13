@@ -1,7 +1,7 @@
 #include "clist_includes.h"
 #include <memory.h>
 
-CLISTAPI int CListAppend(CList list, void *value)
+int CListAppend(CList list, void *value)
 {
     _CList *list_ptr = (_CList *)list;
 
