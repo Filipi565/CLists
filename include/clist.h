@@ -45,7 +45,7 @@ enum CListError
  * @param member_size The size of the data members that will be stored in the list.
  *
  * @return An integer representing the outcome of the operation.
- * - clist_no_error: The list structure was successfully initialized.
+ * - clist_no_error (0): The list structure was successfully initialized.
  * - clist_error_bad_alloc: Memory allocation failed. The list structure was not initialized.
  */
 CLISTAPI int CListInit(CList *outlist, size_t member_size);
