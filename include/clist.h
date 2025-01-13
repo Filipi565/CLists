@@ -92,7 +92,7 @@ CLISTAPI int CListAt(CList list, size_t index, void **out_value);
  * - clist_no_error: The operation was successful.
  * - clist_error_bad_alloc: Memory allocation failed, and the list was deinitialized.
  */
-CLISTAPI int CListAppend(CList list, void *value);
+CLISTAPI int CListAppend(CList list, const void *value);
 
 #if defined(__cplusplus)
 }
