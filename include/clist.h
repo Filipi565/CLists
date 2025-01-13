@@ -3,6 +3,10 @@
 
 #include <stddef.h>
 
+#if !defined(CLIST_BUILD_LIB) // Avoid errors
+@CLIST_DLL_MACRO@
+#endif
+
 #if defined(_WIN32)
     #if defined(__TINYC__) && !defined(__declspec)
         #define __declspec(x) __attribute__((x))
