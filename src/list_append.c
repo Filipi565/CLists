@@ -5,7 +5,7 @@ CLISTAPI int CListAppend(CList list, void *value)
 {
     _CList *list_ptr = (_CList *)list;
 
-    if (list_ptr->size + 1 < list_ptr->capacity)
+    if (list_ptr->size + 1 > list_ptr->capacity)
     {
         list_ptr->capacity *= 2;
         list_ptr->data = realloc(list_ptr->data, list_ptr->capacity * list_ptr->member_size);
