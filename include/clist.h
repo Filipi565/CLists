@@ -37,9 +37,9 @@ enum CListError
 };
 
 /**
- * @brief Initializes a clist
+ * @brief Initializes a CList
  *
- * This function allocates memory for a new clist structure and initializes its fields.
+ * This function allocates memory for a new CList structure and initializes its fields.
  *
  * @param outlist A pointer to a pointer to the CList structure that will be initialized.
  * @param member_size The size of the data members that will be stored in the list.
