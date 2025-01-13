@@ -36,7 +36,19 @@ enum CListError
     clist_error_out_of_range
 };
 
-CLISTAPI int CListInit(CList *list, size_t member_size);
+/**
+ * @brief Initializes a clist
+ *
+ * This function allocates memory for a new clist structure and initializes its fields.
+ *
+ * @param outlist A pointer to a pointer to the CList structure that will be initialized.
+ * @param member_size The size of the data members that will be stored in the list.
+ *
+ * @return An integer representing the outcome of the operation.
+ * - clist_no_error: The list structure was successfully initialized.
+ * - clist_error_bad_alloc: Memory allocation failed. The list structure was not initialized.
+ */
+CLISTAPI int CListInit(CList *outlist, size_t member_size);
 
 #if defined(__cplusplus)
 }
