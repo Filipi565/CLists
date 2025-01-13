@@ -6,7 +6,7 @@ option(BUILD_SHARED_LIBS "Build the library as shared" ON)
 file(GLOB_RECURSE SRC "./src/*.c")
 
 add_library(clist ${SRC})
-target_include_directories(clist "./include")
+target_include_directories(clist PRIVATE "./include")
 
 install(TARGETS clist
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
