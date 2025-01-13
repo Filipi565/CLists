@@ -19,5 +19,7 @@ CLISTAPI int CListAppend(CList list, void *value)
     void *obj = ((char *)list_ptr->data) + (list_ptr->size * list_ptr->member_size);
     memmove(obj, value, list_ptr->member_size);
 
+    list_ptr->size++;
+
     return clist_no_error;
 }
