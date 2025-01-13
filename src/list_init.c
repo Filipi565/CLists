@@ -2,6 +2,11 @@
 
 int CListInit(CList *outlist, size_t member_size)
 {
+    if (outlist == NULL)
+    {
+        return clist_error_null_reference;
+    }
+
     _CList *list;
     list = malloc(sizeof(_CList));
 

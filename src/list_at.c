@@ -2,6 +2,11 @@
 
 int CListAt(CList list, size_t index, void **out_value)
 {
+    if (list == NULL)
+    {
+        return clist_error_null_reference;
+    }
+
     _CList *list_ptr = (_CList *)list;
     (*out_value) = NULL;
 

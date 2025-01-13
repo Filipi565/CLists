@@ -37,7 +37,8 @@ enum CListError
 {
     clist_no_error = 0,
     clist_error_bad_alloc,
-    clist_error_out_of_range
+    clist_error_out_of_range,
+    clist_error_null_reference
 };
 
 /**

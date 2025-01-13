@@ -3,6 +3,11 @@
 
 int CListAppend(CList list, const void *value)
 {
+    if (list == NULL)
+    {
+        return clist_error_null_reference;
+    }
+
     _CList *list_ptr = (_CList *)list;
 
     if (list_ptr->size + 1 > list_ptr->capacity)
