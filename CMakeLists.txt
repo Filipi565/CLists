@@ -15,3 +15,8 @@ install(TARGETS clist
 set_target_properties(clist PROPERTIES VERSION ${PROJECT_VERSION})
 set_target_properties(clist PROPERTIES SOVERSION ${PROJECT_VERSION_MAJOR})
 set_target_properties(clist PROPERTIES PUBLIC_HEADER "include/clist.h")
+
+configure_file(clist.pc.in clist.pc @ONLY)
+
+install(FILES ${CMAKE_BINARY_DIR}/clist.pc
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
