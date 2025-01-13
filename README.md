@@ -2,6 +2,34 @@
 
 A simple c lib to create a list
 
+<h2>How to build</h2>
+
+<h3>Clone the repo and go to the folder</h3>
+
+```bash
+git clone https://github.com/Filipi565/CLists.git
+cd CLists
+```
+
+<h3>Build using cmake</h3>
+
+```bash
+cmake . -B build -DCMAKE_BUILD_TYPE=Relase
+cmake --build build
+```
+
+<h3>Install the library</h3>
+
+```bash
+sudo cmake --install build
+```
+
+<h3>Run ldconfig to avoid link errors</h3>
+
+```bash
+sudo ldconfig
+```
+
 <h2>Example</h2>
 
 ```C
