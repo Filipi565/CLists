@@ -64,6 +64,21 @@ CLISTAPI int CListInit(CList *outlist, size_t member_size);
  */
 CLISTAPI void CListDeinit(CList list);
 
+/**
+ * @brief Retrieves the value at the specified index in the list.
+ *
+ * This function retrieves the value at the specified index in the list and stores it in the memory location pointed to by `out_value`.
+ *
+ * @param list The list from which to retrieve the value.
+ * @param index The index of the value to retrieve.
+ * @param out_value A pointer to a pointer where the retrieved value will be stored.
+ *
+ * @return An integer representing the result of the operation.
+ * - `clist_no_error`: The operation was successful.
+ * - `clist_error_out_of_range`: The specified index is out of range.
+ */
+CLISTAPI int CListAt(CList list, size_t index, void **out_value);
+
 #if defined(__cplusplus)
 }
 #endif
