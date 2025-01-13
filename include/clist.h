@@ -49,6 +49,7 @@ enum CListError
  * - clist_error_bad_alloc: Memory allocation failed. The list structure was not initialized.
  */
 CLISTAPI int CListInit(CList *outlist, size_t member_size);
+CLISTAPI void CListDeinit(CList list);
 
 #if defined(__cplusplus)
 }
