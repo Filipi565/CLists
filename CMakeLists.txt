@@ -12,7 +12,7 @@ set_target_properties(clist PROPERTIES VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
     PUBLIC_HEADER "./include/clist.h")
 
-configure_file(clist.pc.in clist.pc @ONLY)
+configure_file(./cmake/clist.pc.in clist.pc @ONLY)
 
 install(TARGETS clist
     LIBRARY DESTINATION "${CMAKE_INSTALL_PREFIX}/lib"
