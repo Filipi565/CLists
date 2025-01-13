@@ -1,6 +1,4 @@
-#include "clist_struct.h"
-#include <stdlib.h>
-#include <clist.h>
+#include "clist_includes.h"
 
 int CListInit(CList *outlist, size_t member_size)
 {
