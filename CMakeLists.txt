@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(CList VERSION 1.1.1)
+project(CList VERSION 1.2.0)
 
 option(BUILD_SHARED_LIBS "Build the library as shared" ON)
 
