@@ -8,7 +8,7 @@ typedef struct _CList
     size_t member_size;
     size_t capacity;
     size_t size;
-    void *data;
+    char data[1];
 } _CList;
 
 #endif

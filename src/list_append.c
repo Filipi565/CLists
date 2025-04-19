@@ -13,15 +13,14 @@ int CListAppend(CList list, const void *value)
     if (list_ptr->size + 1 > list_ptr->capacity)
     {
         list_ptr->capacity *= 2;
-        list_ptr->data = realloc(list_ptr->data, list_ptr->capacity * list_ptr->member_size);
-        if (list_ptr->data == NULL)
+        list_ptr = realloc(list_ptr, sizeof(_CList) + list_ptr->capacity * list_ptr->member_size);
+        if (list_ptr == NULL)
         {
-            CListDeinit(list);
             return clist_error_bad_alloc;
         }
     }
 
-    void *obj = ((char *)list_ptr->data) + (list_ptr->size * list_ptr->member_size);
+    void *obj = list_ptr->data + (list_ptr->size * list_ptr->member_size);
     memmove(obj, value, list_ptr->member_size);
 
     list_ptr->size++;
