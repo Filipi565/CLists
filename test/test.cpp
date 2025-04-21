@@ -18,6 +18,11 @@ class List
         }
     }
 
+    ~List()
+    {
+        CListDeinit(m_list);
+    }
+
     void append(const value_type &value)
     {
         int result = CListAppend(m_list, &value);
