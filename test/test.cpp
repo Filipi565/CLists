@@ -38,7 +38,7 @@ class List
         return CListGetCapacity(m_list);
     }
 
-    site_t size() const
+    size_t size() const
     {
         return CListGetSize(m_list);
     }
