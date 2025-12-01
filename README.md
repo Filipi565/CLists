@@ -36,7 +36,7 @@ sudo ldconfig
 #include <clist.h>
 #include <stdio.h>
 
-#define THROW_BADALLOC {fprintf(stderr, "BacAllocError\n");return -1;}
+#define THROW_BADALLOC {fprintf(stderr, "BadAllocError\n");return -1;}
 
 int main()
 {
