@@ -2,10 +2,10 @@
 
 size_t CListGetCapacity(CList list)
 {
-    return ((_CList *)list)->capacity;
+    return list->capacity;
 }
 
 size_t CListGetSize(CList list)
 {
-    return ((_CList *)list)->size;
+    return list->size;
 }

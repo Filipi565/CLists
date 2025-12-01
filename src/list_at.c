@@ -7,15 +7,14 @@ int CListAt(CList list, size_t index, void **out_value)
         return clist_error_null_reference;
     }
 
-    _CList *list_ptr = (_CList *)list;
     (*out_value) = NULL;
 
-    if (index >= list_ptr->size)
+    if (index >= list->size)
     {
         return clist_error_out_of_range;
     }
 
-    (*out_value) = list_ptr->data + (index * list_ptr->member_size);
+    (*out_value) = list->data + (index * list->member_size);
 
     return clist_no_error; // Success
 }

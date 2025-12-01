@@ -31,7 +31,7 @@ extern "C" {
 #endif
 
 typedef enum CListError CListError;
-typedef void *CList;
+typedef struct _CList *CList;
 
 enum CListError
 {

@@ -8,22 +8,20 @@ int CListAppend(CList list, const void *value)
         return clist_error_null_reference;
     }
 
-    _CList *list_ptr = (_CList *)list;
-
-    if (list_ptr->size + 1 > list_ptr->capacity)
+    if (list->size + 1 > list->capacity)
     {
-        list_ptr->capacity *= 2;
-        list_ptr = realloc(list_ptr, sizeof(_CList) + list_ptr->capacity * list_ptr->member_size);
-        if (list_ptr == NULL)
+        list->capacity *= 2;
+        list = realloc(list, sizeof(_CList) + list->capacity * list->member_size);
+        if (list == NULL)
         {
             return clist_error_bad_alloc;
         }
     }
 
-    void *obj = list_ptr->data + (list_ptr->size * list_ptr->member_size);
-    memmove(obj, value, list_ptr->member_size);
+    void *obj = list->data + (list->size * list->member_size);
+    memmove(obj, value, list->member_size);
 
-    list_ptr->size++;
+    list->size++;
 
     return clist_no_error;
 }

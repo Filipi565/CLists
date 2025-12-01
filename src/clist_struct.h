@@ -3,12 +3,14 @@
 
 #include <stddef.h>
 
-typedef struct _CList
+typedef struct _CList _CList;
+
+struct _CList
 {
     size_t member_size;
     size_t capacity;
     size_t size;
     char data[1];
-} _CList;
+};
 
 #endif
