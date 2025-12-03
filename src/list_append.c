@@ -1,4 +1,5 @@
 #include "clist_includes.h"
+#include <string.h>
 #include <memory.h>
 
 int CListAppend(CList list, const void *value)
